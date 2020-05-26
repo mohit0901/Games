@@ -7,26 +7,29 @@
 <script src="ticjs.js"></script>
 </head>
 <body>
-<p>Player 1 = 'X'</p>
-<p>Player 2 = 'O'</p>
-<table>
-<tr>
-	<td id="t1" onclick="func(this)" class="c1"></td>
-	<td id="t2" onclick="func(this)" class="c1"></td>
-	<td id="t3" onclick="func(this)" class="c2"></td>
-</tr>
-<tr>
-	<td id="t4" onclick="func(this)" class="c1"></td>
-	<td id="t5" onclick="func(this)" class="c1"></td>
-	<td id="t6" onclick="func(this)" class="c2"></td>
-</tr>
-<tr>
-	<td id="t7" onclick="func(this)" class="c3"></td>
-	<td id="t8" onclick="func(this)" class="c3"></td>
-	<td id="t9" onclick="func(this)"></td>
-</tr>
-</table>
-<p id="para"></p>
-<button type="button" onclick="func2()">NEW GAME</button>
+<p>Enter character for player 1 : <input type="text" id="tx1" name="pl1" required="true"/></p>
+<p>Enter character for player 2 : <input type="text" id="tx2" name="pl2" required="true"/></p>
+<button onclick="check()" type="button">NEW GAME</button>
+<div>
+	<table>
+	<tr>
+		<td id="t1" onclick="func(this)" class="c1"></td>
+		<td id="t2" onclick="func(this)" class="c1"></td>
+		<td id="t3" onclick="func(this)" class="c2"></td>
+	</tr>
+	<tr>
+		<td id="t4" onclick="func(this)" class="c1"></td>
+		<td id="t5" onclick="func(this)" class="c1"></td>
+		<td id="t6" onclick="func(this)" class="c2"></td>
+	</tr>
+	<tr>
+		<td id="t7" onclick="func(this)" class="c3"></td>
+		<td id="t8" onclick="func(this)" class="c3"></td>
+		<td id="t9" onclick="func(this)"></td>
+	</tr>
+	</table>
+	<p id="para"></p>
+</div>
+
 </body>
 </html>

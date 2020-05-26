@@ -1,11 +1,13 @@
 //javascript for tic tac toe
 var x=1;
+var ch1;
+var ch2;
 function func(elem)
 {
 	if(x==1)
-		elem.innerHTML='X';
+		elem.innerHTML=ch1;
 	else
-		elem.innerHTML='O';
+		elem.innerHTML=ch2;
 	if(x==1)
 		x=0;
 	else
@@ -45,33 +47,62 @@ function func(elem)
 	{
 		x1=document.getElementById("para");
 		if(co==1)
-			x1.innerHTML=((p1=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p1==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==2)
-			x1.innerHTML=((p4=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p4==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==3)
-			x1.innerHTML=((p7=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p7==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==4)
-			x1.innerHTML=((p1=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p1==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==5)
-			x1.innerHTML=((p2=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p2==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==6)
-			x1.innerHTML=((p3=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p3==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==7)
-			x1.innerHTML=((p1=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p1==ch1)?"winner is player 1":"winner is player 2");
 		else if(co==8)
-			x1.innerHTML=((p3=='X')?"winner is player 1":"winner is player 2");
+			x1.innerHTML=((p3==ch1)?"winner is player 1":"winner is player 2");
 	}
 	else if(co==-2)
 		document.getElementById("para").innerHTML="Match is Tied!";
 	
 }
-function func2()
+function check()
 {
-	var x=document.getElementsByTagName("td");
-	var i;
-	for(i=0;i<9;i++)
+	var p1=document.getElementById("tx1").value;
+	var p2=document.getElementById("tx2").value;
+	/*document.write(p1);
+	document.write(p2);*/
+	var msg = "Please enter ";
+	if(p1==""&&p2!="")
 	{
-		x[i].innerHTML="";
+		msg=msg+"Player 1 character";
+		alert(msg);
+	}
+	else if(p2==""&&p1!="")
+	{
+		msg=msg+"Player 2 character";
+		alert(msg);
+	}
+	else if(p1==""&&p2=="")
+	{
+		msg=msg+"Player 1 and Player 2 character";
+		alert(msg);
+	}
+	else
+	{
+		
+		//document.getElementById("div").setAttribute("style","display:block");
+		var x=document.getElementsByTagName("td");
+		var i;
+		for(i=0;i<9;i++)
+		{
+			x[i].innerHTML="";
+		}
+		ch1=p1;
+		ch2=p2;
+		document.getElementById("para").innerHTML="";
 	}
 }
+
 		
